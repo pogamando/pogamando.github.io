@@ -27,7 +27,7 @@ encoding: "utf-8"
 # Build settings
 markdown: kramdown
 highlighter: rouge
-theme: jekyll-theme-clean-blog
+#theme: jekyll-theme-clean-blog
 remote_theme: BlackrockDigital/startbootstrap-clean-blog-jekyll
 plugins:
   - jekyll-feed
