@@ -28,6 +28,7 @@ encoding: "utf-8"
 markdown: kramdown
 highlighter: rouge
 theme: jekyll-theme-clean-blog
+remote_theme: BlackrockDigital/startbootstrap-clean-blog-jekyll
 plugins:
   - jekyll-feed
 
