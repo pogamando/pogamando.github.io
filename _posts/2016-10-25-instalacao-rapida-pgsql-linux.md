@@ -5,22 +5,76 @@ date:   2016-10-25
 categories: postgresql sql linux
 author: marcos
 ---
-You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
+## Introdução
+------
 
-To add new posts, simply add a file in the `_posts` directory that follows the convention `YYYY-MM-DD-name-of-post.ext` and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.
+E ai, vai instalar o PostgreSQL no Linux? Provavelmente você vai usar os tradicionais gerenciadores de pacote apt-get, yum/dnf ou zypper. Talvez, em poucas situações, você fará a compilação e configuração do PostgreSQL manualmente.
 
-Jekyll also offers powerful support for code snippets:
+No entanto, poucos sabem que a EnterpriseDB fornece um instalador cross-platform do PostgreSQL. Ele está disponível para Windows, Linux e macOS. No Linux, esse instalador funciona em distribuições baseadas no Debian/RedHat/SuSE.
 
-{% highlight ruby %}
-def print_hi(name)
-  puts "Hi, #{name}"
-end
-print_hi('Tom')
-#=> prints 'Hi, Tom' to STDOUT.
+**Observação**: Eu testei o instalador no Slackware Linux 14.2 64Bits, porém, no final do processo ocorre um erro e a instalação é abortada. Se alguém conseguir fazer uma instalação funcional, sinta-se livre para compartilhar conosco :).
+
+## Baixando o instalador
+------
+
+Acesse o link <https://www.postgresql.org/download/linux/> e clique em "Download the Installer" no item "Interactive installer by EnterpriseDB".
+
+download-pg-linux1
+
+Esse link aponta para a página de downloads da EnterpriseDB, onde estão disponíveis as últimas versões do Postgres. Selecione a versão desejada e faça o download clicando em "Linux x86-32" ou "Linux x86-64" de acordo com a arquitetura do seu sistema operacional.
+
+download-pg-linux2
+
+## Instalação
+------
+
+Com o instalador em mãos, execute o comando abaixo para fornecer permissão de "execução" ao instalador:
+
+{% highlight shell %}
+sudo chmod +x postgresql-<versao-so-arquitetura>.run
 {% endhighlight %}
 
-Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll Talk][jekyll-talk].
+Agora, você pode executar o instalador em ambiente gráfico ou modo texto, conforme os comandos abaixo:
 
-[jekyll-docs]: https://jekyllrb.com/docs/home
-[jekyll-gh]:   https://github.com/jekyll/jekyll
-[jekyll-talk]: https://talk.jekyllrb.com/
+{% highlight shell %}
+# Modo grafico
+sudo ./postgresql-<versao-so-arquitetura>.run
+
+# Modo texto (útil para instalação via SSH)
+sudo ./postgresql-<versao-so-arquitetura>.run --mode text
+{% endhighlight %}
+
+A partir deste ponto, o procedimento é o mesmo do instalador para Windows.
+
+wizard-linux-pg1
+Instalador em ambiente gráfico
+
+wizard-linux-pg2
+Instalador em modo texto
+
+## Desinstalação
+------
+A tarefa de desinstalar é tão simples quanto a instalação. Dentro do diretório no qual o PgSQL foi instalado (default é /opt/PostgreSQL/<versão>) há um outro executável chamado "uninstall-postgresql". O desinstalador também fornece a opção de modo gráfico ou texto.
+
+Para usá-lo, forneça permissão de "execução" ao arquivo:
+
+{% highlight shell %}
+sudo chmod +x /opt/PostgreSQL/9.5/uninstall-postgresql
+{% endhighlight %}
+
+Agora você pode executá-lo com o comando abaixo:
+
+{% highlight shell %}
+# Modo gráfico
+sudo /opt/PostgreSQL/9.5/uninstall-postgresql
+
+# Modo texto
+sudo /opt/PostgreSQL/9.5/uninstall-postgresql --mode text
+{% endhighlight %}
+
+> #### Atualização em 11 de junho de 2017
+> Se você encontrar problemas com encoding após a instalação do PostgreSQL, visite o nosso post sobre trocar o enconding do sistema: <http://www.pogamando.com.br/trocando-o-encoding-sql_ascii-para-utf-8-no-postgresql/>
+
+> Para verificar o encoding do PostgreSQL, use a query:
+
+> {% highlight sql %}SHOW SERVER_ENCODING{% endhighlight %}
