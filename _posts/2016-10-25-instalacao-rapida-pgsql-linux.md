@@ -4,10 +4,8 @@ title:  "Instalação rápida do PostgreSQL no Linux"
 date:   2016-10-25
 categories: postgresql sql linux
 author: marcos
+background: /img/2016/10/wizard-linux-pg2.jpg
 ---
-## Introdução
-------
-
 E ai, vai instalar o PostgreSQL no Linux? Provavelmente você vai usar os tradicionais gerenciadores de pacote apt-get, yum/dnf ou zypper. Talvez, em poucas situações, você fará a compilação e configuração do PostgreSQL manualmente.
 
 No entanto, poucos sabem que a EnterpriseDB fornece um instalador cross-platform do PostgreSQL. Ele está disponível para Windows, Linux e macOS. No Linux, esse instalador funciona em distribuições baseadas no Debian/RedHat/SuSE.
@@ -19,11 +17,11 @@ No entanto, poucos sabem que a EnterpriseDB fornece um instalador cross-platform
 
 Acesse o link <https://www.postgresql.org/download/linux/> e clique em "Download the Installer" no item "Interactive installer by EnterpriseDB".
 
-download-pg-linux1
+![download-pg-linux1](/img/2016/10/download-pg-linux1.jpg){:class="img-fluid"}
 
 Esse link aponta para a página de downloads da EnterpriseDB, onde estão disponíveis as últimas versões do Postgres. Selecione a versão desejada e faça o download clicando em "Linux x86-32" ou "Linux x86-64" de acordo com a arquitetura do seu sistema operacional.
 
-download-pg-linux2
+![download-pg-linux2](/img/2016/10/download-pg-linux2.jpg){:class="img-fluid"}
 
 ## Instalação
 ------
@@ -46,11 +44,9 @@ sudo ./postgresql-<versao-so-arquitetura>.run --mode text
 
 A partir deste ponto, o procedimento é o mesmo do instalador para Windows.
 
-wizard-linux-pg1
-Instalador em ambiente gráfico
+![wizard-linux-pg1.jpg](/img/2016/10/wizard-linux-pg1.jpg 'Instalador em ambiente gráfico'){:class="img-fluid"}
 
-wizard-linux-pg2
-Instalador em modo texto
+![wizard-linux-pg2](/img/2016/10/wizard-linux-pg2.jpg 'Instalador em modo texto'){:class="img-fluid"}
 
 ## Desinstalação
 ------
@@ -73,7 +69,7 @@ sudo /opt/PostgreSQL/9.5/uninstall-postgresql --mode text
 {% endhighlight %}
 
 > #### Atualização em 11 de junho de 2017
-> Se você encontrar problemas com encoding após a instalação do PostgreSQL, visite o nosso post sobre trocar o enconding do sistema: <http://www.pogamando.com.br/trocando-o-encoding-sql_ascii-para-utf-8-no-postgresql/>
+> Se você encontrar problemas com encoding após a instalação do PostgreSQL, visite o nosso post sobre trocar o enconding do sistema: <http://www.pogamando.com.br/2017/06/trocando-encoding-sqlascii-para-uf8-pgsql/>
 
 > Para verificar o encoding do PostgreSQL, use a query:
 

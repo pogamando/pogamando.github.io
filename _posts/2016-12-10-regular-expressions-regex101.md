@@ -9,8 +9,8 @@ Expressões Regulares (RegExp) são muito uteis para validar dados ou mesmo loca
 
 Faz algum tempo que encontrei o [Regular Expressions 101](https://regex101.com/). Desde então, passei a testar/debugar todas as minhas expressões regulares nesta ferramenta. Recomendo 😀.
 
-[regex101
-Exemplo de uso do Regex101: Procurando um email dentro do texto]
+![regex101-print](/img/2016/12/regex101-print.png){:class="img-fluid"}
+*Exemplo de uso do Regex101: Procurando um email dentro do texto*
 
 A interface do Regex101 é muito simples de usar, mas vou destacar alguns elementos:
 

@@ -7,15 +7,13 @@ author: marcos
 ---
 Nas últimas semanas encontrei um problema ao instalar o PostgreSQL 9.6 no Ubuntu Server 16.04 LTS. Mesmo definindo o locale/charset do sistema operacional como "pt_BR.UTF-8", o Postgres continuava definindo o encoding do sistema como "SQL_ASCII". Ao tentar criar uma nova base de dados, o postgres me retornava a seguinte mensagem:
 
-[ERROR: new enconding (UTF8) is incompatible with the encoding of the template database (SQL_ASCII) HINT: Use the same encoding as in the template database, or use template0 as template.
-Mensagem de erro mostrada pelo PgAdmin3]
+![pg_admin_error_charset](/img/2017/06/pg_admin_error_charset.png){:class="img-fluid"}
 
 Encontrei várias abordagens que sugeriam excluir o "template0" e "template1" do sistema e recria-las com o encoding "UTF-8". Essas abordagens, além de não resolverem meu problema, agora esses templates apareciam no ObjectBrowser do PgAdmin3 como base de dados (algum desavisado poderia deleta-las por engano).
 
 Analisando melhor o problema, percebi que a base "postgres" foi criada com o tal enconding "SQL_ASCII", conforme mostra a imagem a seguir:
 
-[sql pane database]
-
+![pg_admin_sql_pane_bd_postgres](/img/2017/06/pg_admin_sql_pane_bd_postgres.png){:class="img-fluid"}
 
 A solução foi muito simples, bastou rodar o SQL abaixo para fazer o update do encoding de todas as bases do sistema: "postgres", "template0" e "template1".
 
