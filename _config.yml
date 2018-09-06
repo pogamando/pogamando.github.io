@@ -34,10 +34,24 @@ plugins:
 authors:
   marcos:
     name: Marcos Koch Salvador
-    github: salvadormarcos
+    bio: |
+        Bacharel em Sistemas de Informação e pós graduado em Gestão de Segurança da Informação pela Universidade do Sul de Santa Catarina (UNISUL).
+
+        Começou a aprender programação por conta própria em 2003. Seu primeiro contato com programação foi com <a href="https://pt.wikipedia.org/wiki/MIRC_script">mIRC Scripting</a>, PHP e JavaScript. Também já brincou com Delphi (ecaa hehehe), C (Arduino) e Shell Script. Em 2008 conheceu o Java e desde então é um orgulhoso javeiro. Gosta de testar novidades e é alérgico a tecnologias legadas.
+    areas: [ 'Arquitetura de Software', 'Computação Distribuída', 'Cloud Computing', 'Desenvolvimento Web/Mobile', 'Sistemas Embarcados' ]
+    social:
+        github: salvadormarcos
+        linkedin: marcos-koch-salvador-93179729
   ulisses:
     name: Ulisses Gabriel
-    github: pogamando
+    bio: |
+        Bacharel em Ciência da Computação pela Universidade do Sul de Santa Catarina (UNISUL).
+
+        Tem Java como sua linguagem de programação "Mãe", mas atualmente prefere e trabalha com PHP e Javascript e já brincou com Ruby on Rails, C# e Objective C. Gosta de aprender coisas novas e se especializar no que já sabe.
+    areas: ['Desenvolvimento Web/Full Stack', 'Frameworks de desenvolvimento (Laravel, Symfony2, Ionic, Ionic2, VueJS)', 'Cloud Computing']
+    social:
+#        github: pogamando
+        linkedin: ulisses-gabriel-084a3264/
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list

@@ -1,0 +1,42 @@
+---
+layout: page
+title: Sobre nós
+permalink: /sobre-nos/
+---
+{% for entry in site.authors %}
+    {% assign author = entry[1] %}
+    <h4>{{ author.name }}</h4>
+
+    <blockquote>{{ author.bio | newline_to_br }}</blockquote>
+
+    <p>
+        {% for area in author.areas %}
+        <span class="badge badge-secondary">{{ area }}</span>
+        {% endfor %}
+    </p>
+
+    {% assign social = author.social %}
+    <ul class="list-inline text-center">
+        {% if social.github %}
+        <li class="list-inline-item">
+            <a href="https://github.com/{{ social.github }}"">
+                <span class="fa-stack fa-sm">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                </span>
+            </a>
+        </li>
+        {% endif %}
+
+        {% if social.linkedin %}
+        <li class="list-inline-item">
+            <a href="https://www.linkedin.com/in/{{ social.linkedin }}">
+                <span class="fa-stack fa-sm">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+                </span>
+            </a>
+        </li>
+        {% endif %}
+    </ul>
+{% endfor %}
