@@ -6,7 +6,7 @@ categories: postgresql sql linux
 author: marcos
 background: /img/2016/10/wizard-linux-pg2.jpg
 ---
-E ai, vai instalar o PostgreSQL no Linux? Provavelmente você vai usar os tradicionais gerenciadores de pacote apt-get, yum/dnf ou zypper. Talvez, em poucas situações, você fará a compilação e configuração do PostgreSQL manualmente.
+Ao instalar o PostgreSQL no Linux geralmente usamos os tradicionais gerenciados de pacotes apt-get, yum/dnf ou zyper. Em poucas situações necessitamos compilar e configurar o PostgreSQL manualmente.
 
 No entanto, poucos sabem que a EnterpriseDB fornece um instalador cross-platform do PostgreSQL. Ele está disponível para Windows, Linux e macOS. No Linux, esse instalador funciona em distribuições baseadas no Debian/RedHat/SuSE.
 
@@ -69,7 +69,7 @@ sudo /opt/PostgreSQL/9.5/uninstall-postgresql --mode text
 {% endhighlight %}
 
 > #### Atualização em 11 de junho de 2017
-> Se você encontrar problemas com encoding após a instalação do PostgreSQL, visite o nosso post sobre trocar o enconding do sistema: <http://www.pogamando.com.br/2017/06/trocando-encoding-sqlascii-para-uf8-pgsql/>
+> Se você encontrar problemas com encoding após a instalação do PostgreSQL, visite o nosso post sobre trocar o enconding do sistema: [Trocando o encoding SQL_ASCII para UTF-8 no PostgreSQL]({% post_url 2017-06-11-trocando-encoding-sqlascii-para-uf8-pgsql %})
 
 > Para verificar o encoding do PostgreSQL, use a query:
 
