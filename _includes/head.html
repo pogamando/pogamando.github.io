@@ -5,9 +5,9 @@
 
     <title>
         {% if page.title %}
-            {{ page.title | escape }} - {{ site.title | escape }}
+        {{ page.title | escape }} - {{ site.title | escape }}
         {% else %}
-            {{ site.title | escape }}
+        {{ site.title | escape }}
         {% endif %}
     </title>
 
@@ -57,6 +57,11 @@
 
         .navbar-light.fixed-top a {
             color: #9c9c9c;
+        }
+
+        #mainNav .navbar-nav > li.nav-item > a:hover,
+        #mainNav .navbar-brand:hover {
+            color: #000 !important;
         }
     </style>
 </head>
