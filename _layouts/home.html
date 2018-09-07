@@ -3,7 +3,7 @@ layout: default
 ---
 
 <!-- Page Header -->
-<header class="masthead">
+<header class="masthead" style="overflow: hidden;">
     {% if page.background %}
     <img src="{{ page.background | prepend: site.baseurl | replace: '//', '/' }}" alt="{{site.title}}" style="position: absolute;width: 100%;">
     {% endif %}
