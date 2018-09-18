@@ -1,6 +1,6 @@
 # Blog estático do Pogamando rodando sobre Jekyll
 
-O conteudo do blog é escrito em Markdown e depois convertido para HTML estático pelo Jekyll.
+O conteúdo deste blog é escrito em Markdown e depois convertido para HTML estático pelo Jekyll.
 
 ## Instalando
 
@@ -8,7 +8,7 @@ Primeiramente, para executar o projeto é necessário instalar o Ruby. Você pod
 
 Para instalar o Jekyll, após a instalação do Ruby, execute o comando `gem install bundler jekyll`.
 
-Por ultimo, entre dentro do diretório do projeto e execute o comando `gem install` para baixar todas as dependências necessárias.
+Por último, entre dentro do diretório do projeto e execute o comando `gem install` para baixar todas as dependências necessárias.
 
 ## Executando
 
