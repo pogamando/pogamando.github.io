@@ -131,4 +131,4 @@ public class Cliente {
 }
 {% endhighlight %}
 
-Se você quiser baixar o código-fonte deste exemplo, disponibilizei o mesmo no meu ([GitHub](https://github.com/salvadormarcos/pogamando-exemplos/tree/master/conditional-validation)).
+Se você quiser baixar o código-fonte deste exemplo, disponibilizei o mesmo no ([GitHub](https://github.com/pogamando/exemplos/tree/master/conditional-validation)).

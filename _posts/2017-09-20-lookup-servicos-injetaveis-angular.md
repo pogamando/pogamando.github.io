@@ -125,4 +125,4 @@ export class ProdutoService extends CrudService {
 }
 {% endhighlight %}
 
-Se você quiser baixar o código-fonte deste exemplo, disponibilizei um projeto baseado no Angular CLI no meu [GitHub](https://github.com/salvadormarcos/pogamando-exemplos/tree/master/angular-lookup-servicos-injetaveis).
+Se você quiser baixar o código-fonte deste exemplo, disponibilizei um projeto baseado no Angular CLI no [GitHub](https://github.com/pogamando/exemplos/tree/master/angular-lookup-servicos-injetaveis).
