@@ -20,7 +20,7 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://pogamando.com.br" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  pogamando
 paginate: 12
-paginate_path: "/page:num/"
+paginate_path: "/posts/:num/"
 permalink: /:year/:month/:title/
 encoding: "utf-8"
 
@@ -30,6 +30,7 @@ highlighter: rouge
 remote_theme: BlackrockDigital/startbootstrap-clean-blog-jekyll
 plugins:
   - jekyll-feed
+  - jekyll-paginate
 
 authors:
   marcos:
