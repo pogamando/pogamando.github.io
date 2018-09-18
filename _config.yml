@@ -15,7 +15,7 @@
 # in the templates via {{ site.myvariable }}.
 title: Pogamando
 email: your-email@example.com
-description:
+description: ""
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://pogamando.com.br" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  pogamando
